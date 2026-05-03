@@ -14,24 +14,24 @@ const routes = {
   "/categories": CategoriesPage,
 };
 
-createRoot(document.getElementById("root")!).render(
-    <App />
-);
+// createRoot(document.getElementById("root")!).render(
+//     <App />
+// );
 
 // Backup awal
-// createRoot(document.getElementById("root")!).render(
-//     <QueryClientProvider client={qc}>
-//       <nav
-//         style={{
-//           padding: 12,
-//           borderBottom: "1px solid #ddd",
-//           marginBottom: 12,
-//         }}
-//       >
-//         <Link to="/">Home</Link> | <Link to="/products">Products</Link> |{" "}
-//         <Link to="/categories">Categories</Link>
-//         <h1>halo</h1>
-//       </nav>
-//       <RouterProvider routes={routes} />
-//     </QueryClientProvider>
-// );
+createRoot(document.getElementById("root")!).render(
+    <QueryClientProvider client={qc}>
+      <nav
+        style={{
+          padding: 12,
+          borderBottom: "1px solid #ddd",
+          marginBottom: 12,
+        }}
+      >
+        <Link to="/">Home</Link> | <Link to="/products">Products</Link> |{" "}
+        <Link to="/categories">Categories</Link>
+        <h1>halo</h1>
+      </nav>
+      <RouterProvider routes={routes} />
+    </QueryClientProvider>
+);

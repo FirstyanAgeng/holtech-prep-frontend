@@ -1,11 +1,11 @@
 import { useProducts, useDeleteProduct } from "./useProducts";
 
 export default function ProductList() {
-  const { data, isLoading, error } = useProducts();
+  const {isLoading, isError, data} = useProducts();
   const del = useDeleteProduct();
 
   if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>Error loading products</div>;
+  if (isError) return <div>Error loading products</div>;
 
   return (
     <div>
@@ -21,8 +21,8 @@ export default function ProductList() {
           </tr>
         </thead>
         <tbody>
-          {data?.map((p: any) => (
-            <tr key={p.id}>
+          {data?.map((p: any, i: number) => (
+            <tr key={i}>
               <td>{p.name}</td>
               <td>{p.category?.name ?? "-"}</td>
               <td>{p.price}</td>

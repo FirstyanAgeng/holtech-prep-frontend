@@ -33,8 +33,8 @@ export default function ProductForm() {
           }
         >
           <option value="">-- none --</option>
-          {categories?.map((c: any) => (
-            <option key={c.id} value={c.id}>
+          {categories?.map((c: any, i: number) => (
+            <option key={i} value={c.id}>
               {c.name}
             </option>
           ))}

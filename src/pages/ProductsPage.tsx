@@ -1,4 +1,3 @@
-import React from "react";
 import ProductList from "../features/products/ProductList";
 import ProductForm from "../features/products/ProductForm";
 

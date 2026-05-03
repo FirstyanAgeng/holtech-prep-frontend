@@ -10,6 +10,7 @@ function App() {
     <>
       <div style={{ padding: 16 }}>
          <h1>Mini ERP — Inventory</h1>
+         <ProductList />
     </div>
     </>
   );
