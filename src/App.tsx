@@ -7,20 +7,31 @@ const qc = new QueryClient();
 
 function App() {
   return (
-    <QueryClientProvider client={qc}>
+    <>
       <div style={{ padding: 16 }}>
-        <h1>Mini ERP — Inventory</h1>
-        <section style={{ display: "flex", gap: 24 }}>
-          <div style={{ flex: 1 }}>
-            <ProductList />
-          </div>
-          <div style={{ width: 360 }}>
-            <ProductForm />
-          </div>
-        </section>
-      </div>
-    </QueryClientProvider>
+         <h1>Mini ERP — Inventory</h1>
+    </div>
+    </>
   );
 }
+
+// Backup
+// function App() {
+//   return (
+//     <QueryClientProvider client={qc}>
+//       <div style={{ padding: 16 }}>
+//         <h1>Mini ERP — Inventory</h1>
+//         <section style={{ display: "flex", gap: 24 }}>
+//           <div style={{ flex: 1 }}>
+//             <ProductList />
+//           </div>
+//           <div style={{ width: 360 }}>
+//             <ProductForm />
+//           </div>
+//         </section>
+//       </div>
+//     </QueryClientProvider>
+//   );
+// }
 
 export default App;
